@@ -1,0 +1,32 @@
+\documentclass[sigconf]{acmart}
+
+\begin{document}
+
+\title{CS 519 Project Report}
+
+\author{Randall Woodall}
+\affiliation{\insitution{New Mexico State University}}
+\email{hossrw@nmsu.edu}
+
+\author{Emrah Sariboz}
+\affiliation{\insitution{New Mexico State University}}
+\email{emrah@nmsu.edu}
+
+\author{Aya Elsayed}
+\affiliation{\insitution{New Mexico State University}}
+\email{aynasser@nmsu.edu}
+
+\maketitle
+
+\section{Problem Statement}
+
+\subsection{Motivation}
+There exists an abundance of data in relating to solar production, and an even greater abundance relating to weather and forecasting.  Combining weather history, weather forecasting, and information about solar production could lead to a load schedule that would allow, in the long run, utilities to create more optimal generator schedules and power rates.  This type of load scheduling would help the consumer to save money by allowing the producer to avoid startup costs and idling costs.  Because of this, new and more accurate methods will be valuable to all parties involved in electrical power.
+
+\subsection{Direct Problem Definition}
+Given five second solar production data in the form of power, and also given historical weather data including wind, temperature, humidity and pressure, can we make semi-accurate predictions about the solar data at the time of the weather data.  To restate this problem if fewer words, can you use current state of the weather to predict current output of a solar panel.  If this is the case, then a day-ahead power forecast should be directly correlated to a day-ahead weather forecast.  The goal of this project is to show that, given current data, we can predict what a solar panel produces, and by logical extension, if we can predict what it will produce tomorrow.
+
+\subsection{Problem Limitations}
+We acknowledge that we have a hard limit on the accuracy of any day-ahead power predictions, based in the uncertainty of day-ahead weather predictions.  Going back to statistics, this limit on accuracy and, therefore, the introduced error, goes back to the statement, "Garbage in, garbage out".  Due to this, we will eliminate the space for introduced error by restraining our semester project to include only the historical data, where we have known values and actual measurements.
+
+\end{document}
