@@ -9,15 +9,12 @@ import numpy as np
 
 #historical
 
-day = np.array ([20200207,20200208,20200209,20200206,20200205,20200204])
+day = np.array ([20200322,20200323,20200324])
 
 for i in range(day.size):
 
     old_data = requests.get ('https://api.weather.com/v2/pws/history/all?stationId=KNMLASCR263&format=json&units=e&date='+str(day[i])+'&apiKey=33b111b523f94b80b111b523f9bb80b8', auth=HTTPBasicAuth('KNMLASCR263', 'N2miGFcR'))
     #forecast daily/5 days
-
-    future_data = requests.get ('https://api.weather.com/v3/wx/forecast/daily/5day?geocode=32.28123,-106.753756&format=json&units=e&language=en-US&apiKey=33b111b523f94b80b111b523f9bb80b8')
-    print(future_data)
 
     print(old_data.status_code)
 
@@ -47,6 +44,6 @@ for i in range(day.size):
         print(text)
 
 
-    jprint(future_data.json())
+    #jprint(future_data.json())
 
   
