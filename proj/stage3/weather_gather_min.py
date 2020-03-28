@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import requests
 from requests.auth import HTTPBasicAuth
 import json
@@ -47,7 +46,6 @@ while(True):
 
    
 
-=======
 import requests
 from requests.auth import HTTPBasicAuth
 import json
@@ -93,8 +91,3 @@ while(True):
             hour['imperial']['precipTotal']))
     output.close()
 
-
-   
-
->>>>>>> Stashed changes
-    time.sleep(60)
