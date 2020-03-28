@@ -18,7 +18,7 @@ for j in range(len(files)):
     m_count = 0;
     outfiles[j].write('time,power\n')
     for i in range(12, len(p1), 12):
-        outfiles[j].write(str(i // (60 * 12)) + ':' + str(i // 12 % 60) + ',')
+        outfiles[j].write(str(i // (60 * 12)).zfill(2) + ':' + str(i // 12 % 60).zfill(2) + ':00, ')
         outfiles[j].write(str(p1[i] + p2[i] + p3[i]))
         outfiles[j].write(',\n')
     outfiles[j].close()
