@@ -76,7 +76,14 @@ lin_model.fit(X_train, Y_train)
 # model evaluation for training set
 y_train_predict = lin_model.predict(X_train)
 
-rmse = (np.sqrt(mean_squared_error(Y_train, y_train_predict)))
-r2 = r2_score(Y_train, y_train_predict)
 
-print('The r2 score is ', r2)
+y_test_predict = lin_model.predict(X_test)
+
+r2_train = r2_score(Y_train, y_train_predict)
+
+r2_test = r2_score(Y_test, y_test_predict)
+
+print('The r2 score on training ', r2_train)
+
+print('The r2 score on testing ', r2_test)
+
