@@ -35,6 +35,8 @@ if __name__ == '__main__':
 
     r2 = r2_score(y_true=y_test, y_pred=prediction)
     print('r2 score: ' + str(r2))
+    r2_train = r2_score(y_true=y_train, y_pred=model.predict(X_train))
+    print('r2 on training data: ' + str(r2_train))
     # f1 = f1_score(y_test, prediction, average='macro')
     # acc = model.score(X_test, y_test)
     # prec = precision_score(y_true=y_test, y_pred=prediction, average='macro')
