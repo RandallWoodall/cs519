@@ -1,0 +1,42 @@
+RandomForestRegressor(n_estimators = 150 , random_state = 1, criterion='mse')
+    r2 score for train data: 0.9959692167043879
+    r2 score for test data: 0.9718835391136708
+RandomForestRegressor(n_estimators = 150 , random_state = 1, criterion='mae')
+    r2 score for train data: 0.9954260693832123
+    r2 score for test data: 0.9680685971919013
+MLPRegressor(hidden_layer_sizes=(100, 100), max_iter=500,random_state=0, tol=0.01)
+    r2 score for train data: 0.9666684782112966
+    r2 score for test data: 0.9571598120224948
+MLPRegressor(hidden_layer_sizes=(100, 100), max_iter=1000,random_state=0, tol=0.01)
+    r2 score for train data: 0.9667452017993962
+    r2 score for test data: 0.9566312841655905
+MLPRegressor(hidden_layer_sizes=(200, 200), max_iter=500, random_state=0, tol=0.01)
+    r2 score for train data: 0.9678235968379109
+    r2 score for test data: 0.956698075721597
+MLPRegressor(hidden_layer_sizes=(200, 200), max_iter=500, random_state=1, tol=0.01)
+    r2 score for train data: 0.9674048975788849
+    r2 score for test data: 0.9580176535690978
+MLPRegressor(hidden_layer_sizes=(200, 200), max_iter=500,random_state=1, tol=0.001)
+    r2 score for train data: 0.9674048975788849
+    r2 score for test data: 0.9580176535690978
+MLPRegressor(hidden_layer_sizes=(200, 200), max_iter=500,random_state=1, tol=0.1)
+    r2 score for train data: 0.9674048975788849
+    r2 score for test data: 0.9580176535690978
+MLPRegressor(hidden_layer_sizes=(200, 200), max_iter=500,random_state=1, tol=1)
+    r2 score for train data: 0.9674048975788849
+    r2 score for test data: 0.9580176535690978
+**MLPRegressor(hidden_layer_sizes=(200, 200), max_iter=1000,random_state=1, tol=0.01, activation='tanh')
+    r2 score for train data: 0.997372656755877
+    r2 score for test data: 0.9696093444313288
+MLPRegressor(hidden_layer_sizes=(100, 100), max_iter=1000, random_state=1, tol=0.01, activation='relu')
+    r2 score for train data: 0.9651872716580046
+    r2 score for test data: 0.9561772214451902
+MLPRegressor(hidden_layer_sizes=(100, 100), max_iter=500, random_state=1, tol=0.01, activation='logistic')
+    r2 score for train data: 0.9843762442401154
+    r2 score for test data: 0.96337104859145
+MLPRegressor(hidden_layer_sizes=(100, 100), max_iter=500, random_state=1, tol=0.01, activation='identity')
+    r2 score for train data: 0.8750426387444616
+    r2 score for test data: 0.8740753906514134
+MLPRegressor(hidden_layer_sizes=(300, 300), max_iter=1000,random_state=1, tol=0.01, activation='tanh')
+    r2 score for train data: 0.9991527701173176
+    r2 score for test data: 0.9664145190572216

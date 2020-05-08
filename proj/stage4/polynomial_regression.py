@@ -9,7 +9,9 @@ import pandas as pd
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error#RMSE
 from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_error#MAE
 import sys
 
 from my_pca import myPCA
@@ -34,12 +36,16 @@ if __name__ == '__main__':
     prediction = model.predict(X=X_test)
 
     r2 = r2_score(y_true=y_test, y_pred=prediction)
-    print('r2 score: ' + str(r2))
-    r2_train = r2_score(y_true=y_train, y_pred=model.predict(X_train))
-    print('r2 on training data: ' + str(r2_train))
-    # f1 = f1_score(y_test, prediction, average='macro')
-    # acc = model.score(X_test, y_test)
-    # prec = precision_score(y_true=y_test, y_pred=prediction, average='macro')
-    # recall = recall_score(y_true=y_test, y_pred=prediction, average='macro')
+    print('r2 score for train data: ' + str(r2))
+    r2 = r2_score(y_true=y_train, y_pred=model.predict(X_train))
+    print('r2 score for test data: ' + str(r2))
 
+    RMSE = mean_squared_error(y_true=y_test, y_pred=prediction)
+    print('RMSE score for train data: ' + str(r2))
+    RMSE = mean_squared_error(y_true=y_train, y_pred=model.predict(X_train))
+    print('RMSE score for test data: ' + str(r2))
 
+    MAE = mean_absolute_error(y_true=y_test, y_pred=prediction)
+    print('MAE  score for train data: ' + str(r2))
+    MAE = mean_absolute_error(y_true=y_train, y_pred=model.predict(X_train))
+    print('MAE  score for test data: ' + str(r2))

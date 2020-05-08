@@ -12,8 +12,10 @@ import matplotlib.pyplot as plt
 import pandas as pd  
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error#RMSE
 from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_error#MAE
+
 from sklearn.preprocessing import StandardScaler
 
 
@@ -33,8 +35,8 @@ X_test= sc.transform(X_test)
 
 
 #Applying the Random Forest
-forest = RandomForestRegressor(n_estimators = 100 , random_state = 1)
-forest = forest.fit(X_train, y_train)
+forest = RandomForestRegressor(n_estimators = 150 , random_state = 1, criterion='mae')
+forest.fit(X_train, y_train)
 y_train_pred = forest.predict(X_train)
 y_test_pred = forest.predict(X_test)
 
@@ -42,4 +44,14 @@ r2 = r2_score(y_true=y_train, y_pred=y_train_pred)
 print('r2 score for train data: ' + str(r2))
 r2 = r2_score(y_true=y_test, y_pred=y_test_pred)
 print('r2 score for test data: ' + str(r2))
+
+RMSE = mean_squared_error(y_true=y_train, y_pred=y_train_pred)
+print('RMSE score for train data: ' + str(RMSE))
+RMSE = mean_squared_error(y_true=y_test, y_pred=y_test_pred)
+print('RMSE score for test data: ' + str(RMSE))
+
+MAE = mean_absolute_error(y_true=y_train, y_pred=y_train_pred)
+print('MAE  score for train data: ' + str(MAE))
+MAE = mean_absolute_error(y_true=y_test, y_pred=y_test_pred)
+print('MAE  score for test data: ' + str(MAE))
 
