@@ -22,4 +22,3 @@ for j in range(len(files)):
         outfiles[j].write(str(p1[i] + p2[i] + p3[i]))
         outfiles[j].write(',\n')
     outfiles[j].close()
-
