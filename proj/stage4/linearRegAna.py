@@ -10,7 +10,8 @@ Feature extraction and linear regression analysis.
 import numpy as np
 import matplotlib.pyplot as plt 
 import pandas as pd  
-import seaborn as sns 
+import seaborn as sns
+from math import sqrt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error#RMSE
@@ -88,9 +89,9 @@ print('The r2 score on training ', r2_train)
 
 print('The r2 score on testing ', r2_test)
 
-RMSE = mean_squared_error(Y_train, y_train_predict)
+RMSE = sqrt(mean_squared_error(Y_train, y_train_predict))
 print('RMSE score for train data: ' + str(RMSE))
-RMSE = mean_squared_error(Y_test, y_test_predict)
+RMSE = sqrt(mean_squared_error(Y_test, y_test_predict))
 print('RMSE score for test data: ' + str(RMSE))
 
 MAE = mean_absolute_error(Y_train, y_train_predict)
